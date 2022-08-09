@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/ceccdd38-270b-44f1-9509-1cdfb15650bd/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/Strapi-Azure-test",
+    "appService.deploySubpath": "."
+}
