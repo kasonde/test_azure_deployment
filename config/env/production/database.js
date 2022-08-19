@@ -3,10 +3,15 @@ module.exports = ({ env }) => ({
       client: 'mysql',
       connection: {
         host: env('database_host'),
+        port: env.int('database_port', 3306),
+        database: env('DATABASE_NAME', 'db'),
         user: env('db_username'),
         password: env('db_password'),
-        ssl: (true),
+        ssl: {
+          rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false), // For self-signed certificates
+        },
       },
+      debug: false,
     },
 });
 
